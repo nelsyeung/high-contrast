@@ -1,0 +1,11 @@
+*high_contrast.txt*	For Vim version 8.2	Last change: 2020 Dec 09
+
+
+		High Contrast color scheme    by Nelson
+
+High Contrast is a colorscheme based on the Visual Studio Code Default High Contrast
+theme.
+
+==============================================================================
+Colorscheme options				*high_contrast-options*
+

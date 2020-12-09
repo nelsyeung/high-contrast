@@ -1,0 +1,265 @@
+; vim: ft=colortemplate foldmethod=marker
+; Information {{{
+Full name:   High Contrast
+Short name:  high_contrast
+Author:      Nelson Yeung <nelsyeung@gmail.com>
+Website:     https://github.com/nelsyeung/high-contrast-theme
+Description: High contrast theme based on VS Code Default High Contrast
+License:     MIT
+Neovim:      yes
+; }}}
+
+Include: _help.colortemplate
+
+; Color palette {{{
+;       Colorname      GUI      Base256  Base16
+Color:  black          #000000  ~        Black
+Color:  red            #f44747  ~        DarkRed
+Color:  green          #7ca668  ~        DarkGreen
+Color:  yellow         #e2c596  ~        DarkYellow
+Color:  blue           #569cd6  ~        DarkBlue
+Color:  magenta        #ffb1fe  ~        DarkMagenta
+Color:  cyan           #4ec9b0  ~        DarkCyan
+Color:  white          #ffffff  ~        Gray
+Color:  brightblack    #080808  ~        DarkGray
+Color:  brightred      #ce9178  ~        Red
+Color:  brightgreen    #b5cea8  ~        Green
+Color:  brightyellow   #dcdcaa  ~        Yellow
+Color:  brightblue     #a4defb  ~        Blue
+Color:  brightmagenta  #c586c0  ~        Magenta
+Color:  brightcyan     #7acae3  ~        Cyan
+Color:  brightwhite    #b0b0b0  ~        White
+
+Term Colors: black red green yellow blue magenta cyan white
+Term Colors: brightblack brightred brightgreen brightyellow
+Term Colors: brightblue brightmagenta brightcyan brightwhite
+; }}}
+
+; Common linked groups {{{
+Character         -> Constant
+Conditional       -> Statement
+Debug             -> Special
+Define            -> PreProc
+Exception         -> Statement
+Float             -> Constant
+Include           -> PreProc
+Label             -> Statement
+Macro             -> PreProc
+Operator          -> Normal
+PreCondit         -> PreProc
+QuickFixLine      -> Search
+Repeat            -> Statement
+SpecialChar       -> Special
+SpecialComment    -> Special
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+String            -> Constant
+Structure         -> Type
+Tag               -> Special
+Typedef           -> StorageClass
+lCursor           -> Cursor
+; }}}
+
+Variant: gui 256 16
+Background: dark
+
+; Transparency {{{
+#if get(g:, '@optionprefix_transp_bg', 0)
+  Normal         white  none
+  CursorLine     none   none
+  Terminal       fg     none
+  ToolbarButton  white  none  bold
+  ToolbarLine    none   none
+#else " opaque
+  Normal         white  black
+  CursorLine     none   brightblack
+  Terminal       fg     black
+  ToolbarButton  white  black  bold
+  ToolbarLine    none   black
+#endif
+; }}}
+
+; Default highlight groups {{{
+Cursor        brightwhite    blue
+CursorLineNr  white          none         bold
+DiffAdd       green          black        s=green
+DiffChange    yellow         black        s=yellow
+DiffDelete    red            black        bold
+DiffText      blue           black        s=blue
+NonText       brightyellow   none
+SpecialKey    brightyellow   black        bold
+SpellBad      brightmagenta  none         t=underline   g=undercurl  s=brightmagenta
+SpellCap      brightmagenta  none         t=underline   g=undercurl  s=brightmagenta
+SpellLocal    yellow         none         t=underline   g=undercurl  s=yellow
+SpellRare     cyan           none         t=underline   g=undercurl  s=cyan
+StatusLine    black          white        reverse
+StatusLineNC  black          brightcyan   reverse
+TabLineSel    white          black
+Title         brightred      none         bold
+ColorColumn   none           brightblack
+Comment       green          none
+Conceal       blue           none
+Number        green          none
+Boolean       blue           none
+Constant      brightred      none
+CursorColumn  none           brightblack
+Function      brightyellow   none
+CursorIM      none           fg
+Delimiter     white          none
+Directory     blue           none
+EndOfBuffer   none           none
+Error         red            white        reverse
+ErrorMsg      red            white        reverse
+FoldColumn    brightwhite    none
+Folded        brightwhite    none         bold
+Identifier    white          none
+Ignore        none           none
+IncSearch     brightred      none         standout
+Include       blue           none
+Keyword       magenta        none
+LineNr        brightwhite    none
+MatchParen    brightwhite    black        bold
+ModeMsg       blue           none
+MoreMsg       blue           none
+Pmenu         brightblue     black
+PmenuSbar     none           black
+PmenuSel      white          brightgreen
+PmenuThumb    none           brightgreen
+PreProc       blue           none
+Question      cyan           none         bold
+Search        yellow         none         reverse
+SignColumn    brightblue     none
+Special       brightred      none
+Statement     magenta        none
+StorageClass  blue           none
+TabLine       brightgreen    black
+TabLineFill   brightgreen    black
+Todo          magenta        none         bold
+Type          cyan           none
+Underlined    brightmagenta  none
+VertSplit     brightcyan     none
+Visual        white          black        reverse
+VisualNOS     none           black        reverse
+WarningMsg    brightred      none         bold
+WildMenu      brightyellow   white        reverse
+NormalMode    black          white        reverse
+InsertMode    black          cyan         bold,reverse
+ReplaceMode   black          brightred    bold,reverse
+VisualMode    black          magenta      bold,reverse
+CommandMode   black          magenta      bold,reverse
+; }}}
+
+; Neovim {{{
+TermCursor    -> Cursor
+TermCursorNC     brightblack  brightgreen
+; }}}
+
+; Vim {{{
+vimVar              -> Identifier
+vimFunc             -> Function
+vimUserFunc         -> Function
+helpSpecial         -> Special
+vimSet              -> Normal
+vimSetEqual         -> Normal
+vimNotFunc          -> vimCommand
+vimCommand          -> Statement
+vimCommentString       brightmagenta  none
+vimCmdSep              blue           none  bold
+helpExample            brightcyan     none
+helpOption             cyan           none
+helpNote               magenta        none
+helpVim                magenta        none
+helpHyperTextJump      blue           none
+helpHyperTextEntry     green          none
+vimIsCommand           brightyellow   none
+vimSynMtchOpt          yellow         none
+vimOption              white          none
+vimSynType             cyan           none
+vimHiLink              blue           none
+vimHiGroup             blue           none
+vimGroup               blue           none  bold
+; }}}
+
+; Diff {{{
+diffAdded  -> Statement
+diffLine   -> Identifier
+; }}}
+
+; Git {{{
+gitcommitComment            brightcyan              none  italic
+gitcommitUntracked       -> gitcommitComment
+gitcommitDiscarded       -> gitcommitComment
+gitcommitSelected        -> gitcommitComment
+gitcommitUnmerged           brightgreen             none  bold
+gitcommitOnBranch           green             none  bold
+gitcommitBranch             magenta                 none  bold
+gitcommitNoBranch        -> gitcommitBranch
+gitcommitdiscardedtype      red                     none
+gitcommitselectedtype       brightgreen                   none
+gitcommitHeader             green             none
+gitcommitUntrackedFile      cyan                    none  bold
+gitcommitDiscardedFile      red                     none  bold
+gitcommitSelectedFile       brightgreen                   none  bold
+gitcommitUnmergedFile       brightyellow                  none  bold
+gitcommitFile               brightblue              none  bold
+gitcommitDiscardedArrow  -> gitcommitDiscardedFile
+gitcommitSelectedArrow   -> gitcommitSelectedFile
+gitcommitUnmergedArrow   -> gitcommitUnmergedFile
+; }}}
+
+; Shell {{{
+shAlias         -> shVariable
+shCmdSubRegion  -> String
+shLoop          -> Statement
+shNoQuote       -> Normal
+shNumber        -> Normal
+shOption        -> Normal
+shQuote         -> String
+shSetList       -> shVariable
+shStatement     -> Function
+shTestOpr       -> Normal
+shVarAssign     -> shVariable
+shVariable      -> Normal
+shDerefSimple   brightblue     none
+shForPP         brightred      none
+shTestPattern   brightgreen    none
+; }}}
+
+; HTML {{{
+htmlTag             brightgreen   none
+htmlEndTag          brightgreen   none
+htmlTagN            brightcyan    none  bold
+htmlTagName         blue          none  bold
+htmlSpecialTagName  blue          none  italic
+htmlArg             brightyellow  none
+javaScript          yellow        none
+; }}}
+
+; JavaScript {{{
+jsFuncCall  -> Function
+; }}}
+
+; ALE {{{
+ALEErrorSign                  red                  none  bold
+ALEInfoSign                   cyan                 none  bold
+ALEWarningSign                yellow               none  bold
+ALEErrorSignLineNr            red                  none
+ALEInfoSignLineNr             cyan                 none
+ALEWarningSignLineNr          yellow               none
+ALEError                      red                  none  undercurl  guisp=red
+ALEErrorLine                  none                 none
+ALEInfo                       cyan                 none  undercurl  guisp=cyan
+ALEInfoLine                   none                 none
+ALEWarning                    yellow               none  undercurl  guisp=yellow
+ALEWarningLine                none                 none
+ALEStyleError              -> ALEError
+ALEStyleErrorSign          -> ALEErrorSign
+ALEStyleErrorSignLineNr    -> ALEErrorSignLineNr
+ALEStyleWarning            -> ALEWarning
+ALEStyleWarningSign        -> ALEWarningSign
+ALEStyleWarningSignLineNr  -> ALEWarningSignLineNr
+; }}}
+
+; Dart {{{
+dartCoreType -> StorageClass
+; }}}
