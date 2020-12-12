@@ -9,7 +9,21 @@ License:     MIT
 Neovim:      yes
 ; }}}
 
-Include: _help.colortemplate
+; Documentation {{{
+documentation
+*@shortname.txt*	For Vim version @vimversion	Last change: @date
+
+
+		@fullname color scheme    by @author
+
+@fullname is a colorscheme based on the Visual Studio Code Default High
+Contrast theme.
+
+==============================================================================
+Colorscheme options				*@shortname-options*
+
+enddocumentation
+; }}}
 
 ; Color palette {{{
 ;       Colorname      GUI      Base256  Base16
@@ -81,7 +95,7 @@ Background: dark
 
 ; Default highlight groups {{{
 Cursor        brightwhite    blue
-CursorLineNr  white          none         bold
+CursorLineNr  brightred      none
 DiffAdd       green          black        s=green
 DiffChange    yellow         black        s=yellow
 DiffDelete    red            black        bold
