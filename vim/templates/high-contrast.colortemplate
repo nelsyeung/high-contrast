@@ -35,7 +35,7 @@ Color:  blue           #569cd6  ~        DarkBlue
 Color:  magenta        #ffb1fe  ~        DarkMagenta
 Color:  cyan           #4ec9b0  ~        DarkCyan
 Color:  white          #ffffff  ~        Gray
-Color:  brightblack    #080808  ~        DarkGray
+Color:  brightblack    #101010  ~        DarkGray
 Color:  brightred      #ce9178  ~        Red
 Color:  brightgreen    #b5cea8  ~        Green
 Color:  brightyellow   #dcdcaa  ~        Yellow
@@ -122,7 +122,7 @@ CursorIM      none           fg
 Delimiter     white          none
 Directory     blue           none
 EndOfBuffer   none           none
-Error         red            white        reverse
+Error         red            none
 ErrorMsg      red            white        reverse
 FoldColumn    brightwhite    none
 Folded        brightwhite    none         bold
@@ -135,10 +135,10 @@ LineNr        brightwhite    none
 MatchParen    brightwhite    black        bold
 ModeMsg       blue           none
 MoreMsg       blue           none
-Pmenu         brightblue     black
-PmenuSbar     none           black
-PmenuSel      white          brightgreen
-PmenuThumb    none           brightgreen
+Pmenu         white          blue
+PmenuSbar     none           blue
+PmenuSel      white          brightred
+PmenuThumb    none           brightblue
 PreProc       blue           none
 Question      cyan           none         bold
 Search        yellow         none         reverse
@@ -260,11 +260,11 @@ ALEWarningSign                yellow               none  bold
 ALEErrorSignLineNr            red                  none
 ALEInfoSignLineNr             cyan                 none
 ALEWarningSignLineNr          yellow               none
-ALEError                      red                  none  undercurl  guisp=red
+ALEError                      red                  none  guisp=red
 ALEErrorLine                  none                 none
-ALEInfo                       cyan                 none  undercurl  guisp=cyan
+ALEInfo                       cyan                 none  guisp=cyan
 ALEInfoLine                   none                 none
-ALEWarning                    yellow               none  undercurl  guisp=yellow
+ALEWarning                    yellow               none  guisp=yellow
 ALEWarningLine                none                 none
 ALEStyleError              -> ALEError
 ALEStyleErrorSign          -> ALEErrorSign
