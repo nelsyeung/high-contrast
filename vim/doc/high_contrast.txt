@@ -1,4 +1,4 @@
-*high_contrast.txt*	For Vim version 8.2	Last change: 2021 Jan 22
+*high_contrast.txt*	For Vim version 8.2	Last change: 2021 Jan 23
 
 
 		High Contrast color scheme    by Nelson

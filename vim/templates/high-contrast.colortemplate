@@ -126,7 +126,7 @@ Error         red            none
 ErrorMsg      red            white        reverse
 FoldColumn    brightwhite    none
 Folded        brightwhite    none         bold
-Identifier    white          none
+Identifier    brightred      none
 Ignore        none           none
 IncSearch     brightred      none         standout
 Include       blue           none
