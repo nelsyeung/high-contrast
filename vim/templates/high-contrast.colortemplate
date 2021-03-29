@@ -135,7 +135,7 @@ LineNr        brightwhite    none
 MatchParen    brightwhite    black        bold
 ModeMsg       blue           none
 MoreMsg       blue           none
-Pmenu         black          brightblack
+Pmenu         white          brightblack
 PmenuSbar     none           blue
 PmenuSel      white          brightred
 PmenuThumb    none           brightblue
