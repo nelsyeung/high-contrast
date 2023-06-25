@@ -94,7 +94,7 @@ Background: dark
 ; }}}
 
 ; Default highlight groups {{{
-Cursor        brightwhite    blue
+Cursor        black          white
 CursorLineNr  brightred      none
 DiffAdd       green          black        s=green
 DiffChange    yellow         black        s=yellow
